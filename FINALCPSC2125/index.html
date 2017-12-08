@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Website Project - JP</title>
+    <link rel="stylesheet" href="project.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        var imgArray = new Array();
+
+        imgArray[0] = new Image();
+        imgArray[0].src = 'images/img4.jpg';
+
+        imgArray[1] = new Image();
+        imgArray[1].src = 'images/img5.jpg';
+
+        imgArray[2] = new Image();
+        imgArray[2].src = 'images/img6.jpg';
+
+        imgArray[3] = new Image();
+        imgArray[3].src = 'images/img7.jpg';
+
+        imgArray[4] = new Image();
+        imgArray[4].src = 'images/img8.jpg';
+
+        var pos = 0;
+        
+        function upDateB() {
+            if (pos == 0) {
+            } else {
+                pos--;
+                var j = imgArray[pos].src;
+                document.body.style.background = 'url('+j+')'; 
+            }
+        }
+        function upDateF() {
+            if (pos == 4) {
+            } else {
+                pos++;
+                var j = imgArray[pos].src;
+                document.body.style.background = 'url(' + j + ')';
+            }
+        }
+
+        function updtcol2(clickedid) {
+            var x = document.getElementById(clickedid).src;
+            document.getElementById("col2img").src = x;
+        }
+
+        function c(val) {
+            document.getElementById("lcd").value = val;
+        }
+        function c2(val) {
+            document.getElementById("lcd").value = val;
+            document.getElementById("lcdu").value = val;
+        }
+        function v(val) {
+            if (eqchk == 0) {
+                document.getElementById("lcd").value += val;
+            } else {
+                eqchk = 0;
+                c2("");
+                document.getElementById("lcd").value = val;
+            }
+        }
+        function v2(val) {
+            if (eqchk == 0){
+            var lcdus = document.getElementById("lcdu").value;
+            if (document.getElementById("lcd").value != "" || (lcdus.charAt(lcdus.length - 1) != "+" && lcdus.charAt(lcdus.length - 1) != "*" &&
+                lcdus.charAt(lcdus.length - 1) != "-" && lcdus.charAt(lcdus.length - 1) != "/")) {
+                document.getElementById("lcdu").value += document.getElementById("lcd").value + val;
+                c("");}
+            } else {
+                document.getElementById("lcdu").value = document.getElementById("lcd").value + val;
+                c("");
+                eqchk = 0;
+            }
+        }
+        var eqchk = 0;
+
+        function e() {
+            if (eqchk == 0) {
+                try {
+                    document.getElementById("lcdu").value += document.getElementById("lcd").value;
+                    c(eval(document.getElementById("lcdu").value))
+                    eqchk = 1;
+                }
+                catch (e) {
+                    c('Error')
+                }
+            }
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#col1").hide();
+            $("#col3").hide();
+            $("#calculator").click(function () {
+                $("#col1").show();
+            });
+            $("#movinggraph").click(function () {
+                $("#col3").show();
+            });
+            $("#shape").hide();
+            $("#col3").mouseenter(function () {
+                $("#shape").show();
+            });
+            $("#col3").mouseleave(function () {
+                $("#shape").hide();
+            });
+            $("#shape").click(function(){
+                if ($("#shape").hasClass("circle")) {
+                    $("#shape").removeClass("circle");
+                    $("#shape").addClass("tri");
+                } else {
+                    $("#shape").removeClass("tri");
+                    $("#shape").addClass("circle");
+                }
+            });
+            $("#col3").mousemove(function (e) {
+                var y = e.pageX - this.offsetLeft - 20;
+                var x = e.pageY - this.offsetTop - 20;
+                if (x < $("#col3").height() && y < $("#col3").width()) {
+                    $("span").text(this.offsetleft + "," + x + ", " + this.offsetleft + "," + y);
+                    $("#shape").css({ 'top': x, 'left': y });
+                }
+
+            });
+            
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <ul style="list-style-type:none;">
+            <li>
+                <a href="">Images</a>
+            </li>
+            <li>
+                <a href="">Videos</a>
+            </li>
+            <li>
+                <a href="">Maps</a>
+            </li>
+            <li>
+                <a href="">News</a>
+            </li>
+            <li><a>|</a></li>
+            <li><a href="">patel_jay</a>
+                <ul>
+                    <li><a id="calculator">Calculator</a></li>
+                    <li><a id="movinggraph">MovingGraph</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+        <form method="get" action="http://www.bing.com/search">
+        <input type="hidden" name="cp" value="1252" ?>
+        <div id="searcharea">
+        <img src="http://www.microsoft.com/presspass/_resources/images/img_windowsBingLogo.png" alt="Bing" />
+        <input id="boxx" type="text" name="q" size="30" maxlength="255" />
+        <input id="butt" type="image" src="https://goo.gl/Bb8aey" border="0" alt="Submit" style="width:5%;" />
+        </div>
+        <input type="hidden" name="q1" value="site:bucarotechelp.com" />
+    </form>
+
+    <div class="container2 ">
+    <div class="row" style="">
+        <div class="col-sm-4" >
+            <div class="calbody" align="center" id="col1">
+                <form name="lcdform">
+                    <input id="lcdu" name="lcdsu" type="text" value="" />
+                    <input id="lcd" name="lcds" type="text" value="" />
+                </form>
+                <div id="calcbut">
+                <div id="first-rows">
+                    <button class="del-bg" id="delete" onclick='c("")'>C</button>
+                    <button value="CE" class="btn-style operator opera-bg fall-back" onclick='c2("")'>CE</button>
+                    <button value="+" class="btn-style opera-bg value align operator" onclick='v2("+")'>+</button>
+                    <button value="/" class="btn-style opera-bg operator" onclick='v2("/")'>/</button>
+                </div>
+
+                <div class="rows">
+                    <button value="7" class="btn-style num-bg num first-child" onclick='v("7")'>7</button>
+                    <button value="8" class="btn-style num-bg num" onclick='v("8")'>8</button>
+                    <button value="9" class="btn-style num-bg num" onclick='v("9")'>9</button>
+                    <button value="-" class="btn-style opera-bg operator" onclick='v2("-")'>-</button>
+                </div>
+
+                <div class="rows">
+                    <button value="4" class="btn-style num-bg num first-child" onclick='v("4")'>4</button>
+                    <button value="5" class="btn-style num-bg num" onclick='v("5")'>5</button>
+                    <button value="6" class="btn-style num-bg num" onclick='v("6")'>6</button>
+                    <button value="*" class="btn-style opera-bg operator" onclick='v2("*")'>x</button>
+                </div>
+                    <div class="rows">
+                         <button value="1" class="btn-style num-bg num first-child" onclick='v("1")'>1</button>
+                         <button value="2" class="btn-style num-bg num" onclick='v("2")'>2</button>
+                         <button value="3" class="btn-style num-bg num" onclick='v("3")'>3</button>
+                         <button value="." class="btn-style num-bg period fall-back" onclick='v(".")'>.</button>
+                    </div>
+
+                    <div class="rows">
+                        <button value="0" class="num-bg zero" id="" onclick='v("0")'>0</button>     
+                        <button value="=" id="eqn-bg" class="eqn align" onclick='e()'>=</button>
+                    </div> </div>
+            </div> 
+        </div>
+        <div class="col-sm-4" id="col2">
+            <img src="" id="col2img"/>
+        </div>
+        <div class="col-sm-4" id="col3">
+            <div id="shape" class="circle moveable"></div>
+        </div>
+    </div> </div>
+    <div style="margin: 1% 1% 0 1%; float:left; font-size: 20px; width : 10%;">
+    <input type="button" id="back" value="<" style="" onclick="upDateB()">
+    <input type="button" id="next" value=">" style="" onclick="upDateF()">
+    </div>
+    <div id="thumbnails">
+        <img src="images/img1.jpg" id="1t" onclick="updtcol2(this.id)">
+        <img src="images/img2.jpg" id="2t" onclick="updtcol2(this.id)">
+        <img src="images/img3.jpg" id="3t" onclick="updtcol2(this.id)">
+    </div>
+</body>
+</html>

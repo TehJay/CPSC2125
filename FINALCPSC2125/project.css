@@ -1,0 +1,438 @@
+﻿ ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+ li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+  
+}
+
+.search {
+  width: 100%;
+  position: relative
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid #00B4CC;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  position: absolute;  
+  right: -50px;
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+form {
+    height: 10%;
+    width: 50%;
+    margin: 5% 0px 7% 10%;
+    margin-right: 0%;
+    display: inline-block;
+}
+
+#searcharea {
+    height: 10%;
+    
+}
+
+#searcharea img {
+    width: 15%;
+    vertical-align:middle;
+}
+
+#boxx{
+    width : 70%;
+    
+    font-size: 14pt;
+}
+
+#butt{
+    width : 15%;
+    vertical-align:middle;
+}
+
+.container2 {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+nav ul ul {
+    position:absolute;
+    padding: 0;
+    
+    display:none;
+}
+
+nav ul ul li {
+    border: 1px solid black;
+    display: block;
+
+    margin-left: 0;
+    
+}
+
+nav li:hover ul{
+    display:block;
+}
+
+nav {
+    position: relative;
+}
+
+#thumbnails {
+    display: inline;
+    float:right;
+    margin-right: 1%;
+    margin-left: 2%;
+}
+
+#thumbnails img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 200px;
+}
+
+.col-sm-4 img{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    min-height:100%;
+    min-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#lcd{  
+ text-align: right;  
+ width: 225px;  
+ height: 30px;  
+ font-size: 18px;  
+   vertical-align:sub;
+}
+
+.calbody form {
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left:25px;
+    width: 250px;
+}  
+  
+#lcdu{  
+ color: grey;  
+ text-align: right;  
+ width: 112px;  
+ height: 25px;  
+ font-size: 15px; 
+ float:left; 
+ margin-left: 12px;
+}
+
+
+body {
+  /* Location of the image */
+  background-image: url(images/img4.jpg);
+  
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
+}
+
+.circle {
+      width: 50px;
+      height: 50px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+      background: red;
+    }
+
+.tri {
+    width: 0;
+    height: 0;
+   
+    border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid blue;
+}
+
+#col3, #col2 {
+    height: 360px;
+}
+
+#shape {
+    position:absolute;
+}
+
+#col3 {
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.moveable {
+    
+}
+
+button {
+    border:0;
+    color:#fff;
+}
+
+#result {
+    display:block;
+    font-family: sans-serif;
+    width:230px;
+    height:40px;
+    margin:10px auto;
+    text-align: right;
+    border:0;
+    background:#3b3535;
+    color:#fff;
+    padding-top:20px;
+    font-size:20px;
+    margin-left: 25px;
+    outline: none;
+    overflow: hidden;
+    letter-spacing: 4px;
+    position: relative;
+    top:10px;
+}
+
+#result:hover {
+    
+    cursor: text;
+    
+}
+
+#first-rows {
+    margin-bottom: 20px;
+    position: relative;
+    top:10px;
+}
+
+.rows {
+    width:300px;
+    margin-top:10px;
+}
+.rows3{
+    width:200px;
+    margin-top:10px;
+
+}
+.rows4{
+    width:200px;
+    margin-top:10px;
+
+}
+
+#delete {
+    width:50px;
+    height:50px;
+    margin-left:25px;
+    border-radius:4px;
+}
+
+/* Aligning the division and dot button properly */
+.fall-back {
+    margin-left:3px !important;
+}
+
+/* Aligning the addition and equals to button properly */
+.align {
+    margin-left: 5px !important;
+}
+
+/* Button styling */
+.btn-style {
+    width:50px;
+    height:50px;
+    margin-left:5px;
+    border-radius:4px;
+}
+
+.eqn {
+    width:110px;
+    height:50px;
+    margin-left:5px;
+    border-radius:4px;
+    display:inline-block;
+}
+
+.zero{
+    width: 110px;
+    height:50px;
+    margin-left:25px;
+    border-radius:4px;
+}
+
+.first-child {
+ margin-left:25px;
+}
+
+.last2r{
+    height: 120px;
+    width: 200px;
+}
+.last2rr{
+    height: 120px;
+    width: 300px;
+}
+
+
+/* Adding background color to the number values */
+ .num-bg {
+    background:#000;
+    color:#fff;
+    font-size:26px;
+    cursor:pointer;
+    outline:none;
+    border-bottom:3px solid #333;
+}
+
+ .num-bg:active {
+    background:#000;
+    color:#fff;
+    font-size:26px;
+    cursor:pointer;
+    outline:none;
+    box-shadow: inset 5px 5px 5px #555;
+}
+
+/*Adding background color to the operator values */ 
+.opera-bg {
+    background:#333;
+    color:#fff;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    border-bottom:3px solid #555;
+}
+
+.opera-bg:active {
+    background:#333;
+    color:#fff;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    box-shadow: inset 4px 4px 4px #555;
+}
+
+/*Adding a background color to the delete button */
+.del-bg {
+    background:#24b4de;
+    color:#fff;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    border-bottom:3px solid #399cb9;
+}
+
+.del-bg:active {
+    background:#24b4de;
+    color:#fff;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    box-shadow: inset 4px 4px 4px #399cb9;
+}
+
+/*Adding a background color to the equals to button */
+#eqn-bg {
+    background:#17a928;
+    color:#fff;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    border-bottom:3px solid #1f7a29;
+    
+}
+
+#eqn-bg:active {
+    background:#17a928;
+    color:#fff;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    box-shadow: inset 4px 4px 4px #1f7a29;
+}
+
+@-webkit-keyframes bgChange {
+    0% {
+       background:#24b4de; 
+    }
+    
+    50% {
+      background:#17a928;
+    }
+    
+    100% {
+        background:#399cb9;
+    }
+}
